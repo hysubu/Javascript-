@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function one(){
+            alert("Hi your mail sent successfully !!")
+        }
+        
+        function two(){
+            var a = confirm("Hi your mail sent successfully !!")
+            alert(a) // ok- true cancel - false
+            if (a==true){
+                alert("please wait priccing")
+            }
+        }
+
+        function three(){
+            var a = prompt("Hi your mail sent successfully !!")
+            if (a == "subrat@gmail.com"){
+                alert("tha is your email \n" + a)
+            }else{
+                alert("hello")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <p>Date : 30/12/22</p>
+    <h1>Type of popup Window in javascript</h1>
+    <p>alert() - it use to give confirmation  to user </p>
+    <p>confirm() - it use to ask confirmation  from user </p>
+    <p>prompt() - it use to ask non Boolean input from user </p>
+    <button onclick="one()"> Alert</button>
+    <button onclick="two()"> confirm</button>
+    <button onclick="three()"> prompt</button>
+</body>
+</html>

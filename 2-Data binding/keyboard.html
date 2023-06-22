@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function one(input){
+            alert(input);
+
+        }
+    </script>
+</head>
+<body onload="one('welcome Back...')">
+    <p>Date : 30/12/22</p>
+    <h1>Keyboard Event</h1>
+
+    onkeypress : <input type="text" value="Apple" onkeypress="one(this.value)"/>
+    <br><br>
+    onkeyup : <input type="text" value="Apple" onkeyup="one(this.value)"/>
+    <p>onkeydown : <input type="text" value="Apple" onkeydown="one(this.value)"/></p>
+    <p>onfocus : <input type="text" value="Apple" onfocus="one(this.value)"></p>
+    <p>on blur  : <input type="text" value="Apple" onblur="one(this.value)"></p>
+    <p>on loa  : <input type="text" value="Apple" onload="one(this.value)"></p>
+</body>
+</html>

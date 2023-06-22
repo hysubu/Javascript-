@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function one(pic){
+            document.getElementById("pic").src = pic   
+        }
+    </script>
+</head>
+<style>
+    #sec2{
+        width: 500px;
+        position: relative;
+        float: right;
+        margin-top: -605px;
+        margin-right: 400px;
+        /* border: 2px solid black; */
+    }
+    #sec2,#pic{
+        border-radius: 50px;
+    }
+    #sec1.p,#p1{
+        border-radius: 60%;
+    }
+    #sec1{
+        width: 200px;
+        height: 600px;
+    }
+</style>
+<body>
+    <section id="sec1">
+        <p>
+            <img src="p1.jpg" width="200px" height="180px" alt="" id="p1" onclick="one(this.src)">
+            <br>
+            <img src="p2.jpg" width="200px" height="180px" alt="" id="p1" onclick="one(this.src)">
+            <br>
+            <img src="p3.jpg" width="200px" height="180px" alt="" id="p1" onclick="one(this.src)">
+        </p>
+    </section>
+    <section id="sec2">
+        <img src="p1.jpg" height="550px" width="600px" alt="" id="pic">
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function save(){
+            localStorage.setItem("fullname","subrat")
+            localStorage.setItem("age","21")
+            localStorage.setItem("gender","male")
+            localStorage.setItem("education","Btech")
+            localStorage.setItem("city","Bbsr")
+            alert("data a store successfully ")
+            window.location.href="local-storage2.html" // it use to redirect from one page to Other page 
+            // window.location = current loation maen (localstorage1) if we using href so the current location redirect locl-storage.html
+        }
+    </script>
+</head>
+<body>
+    <h1>Create Local Storage</h1>
+    <!-- <input type="text" id="value"> -->
+    <button onclick="save()">Save</button>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       var one = () =>{
+        alert("one is working ......");
+       }
+
+       function two(value){
+            alert(value)
+
+       }
+    </script>
+</head>
+<body>
+    <p>Date : 30/12/22</p>
+    <h1>Mouse Events Simple Example</h1>
+    <p>The type user intraction with UI is called in javascript </p>
+    <button onclick="one()">1 click </button>
+    <button ondblclick="one()">2 click </button>
+    <button onmousedown="one()">left or Right click</button>
+    <button onmouseenter="one()">On mouse Enter </button>
+    <button onmouseout="one()">On mouse Out </button>
+    <button onmousemove="one()">On mouse Move </button>
+    On change  <select onchange="one()">
+        <option value="">Choose</option>
+        <option value="">Banglore</option>
+        <option value="">Odisha</option>
+        <option value="">Mumbai</option>
+        <option value="">Pune</option>
+    </select>
+
+    <h1>Function With in parameters /params</h1>
+    On change -1 <select onchange="two(this.value)">
+        <option value="">Choose</option>
+        <option value="1">Banglore</option>
+        <option value="2">Odisha</option>
+        <option value="3">Mumbai</option>
+        <option value="4">Pune</option>
+    </select>
+
+    On change-2  <select onchange="two(this.value)">
+        <option value="">Choose</option>
+        <option value="Banglore">Banglore</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+    </select>
+
+    On change -3  <select onchange="two(this.value)">
+        <option>Choose</option>
+        <option >Banglore</option>
+        <option >Odisha</option>
+        <option >Mumbai</option>
+        <option >Pune</option>
+    </select>
+
+</body>
+</html>

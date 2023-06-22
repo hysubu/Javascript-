@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function one() {
+            var res = document.getElementById('city').value;
+            // var len = document.getElementById('city').length ;
+
+            document.getElementById('result').innerText = res
+            document.getElementById('result2').innerText = res.length
+
+        }
+    </script>
+</head>
+
+<body>
+    <p align="center">
+        City : <input type="text" id="city">
+        <button onclick="one()">Click</button>
+    </p>
+    <div align="center">
+        <p id="result">City Name :- </p>
+        <p id="result2"> City length :- </p>
+    </div>
+
+</body>
+
+</html>

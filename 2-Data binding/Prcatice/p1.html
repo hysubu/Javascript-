@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function one(){
+        //     var name = document.getElementById("name").value
+        //     if(name.length == 5){
+        //         document.getElementById("submitbox").innerHTML = name 
+        //     }
+
+        // }
+        
+var c = document.set
+function getCookie(name){
+    console.log("name", name)
+    let cookieValue = null;
+    document.cookie= "username = subrat  "
+    if (document.cookie && document.cookie !== '') {
+        console.log("document.cookie", document.cookie)
+        const cookies = document.cookie.split(';');
+        console.log("cokkies",cookies)
+        console.log("cook_length" , cookies.length)
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            console.log("cookie-trim" , cookie)
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            console.log("cookivalue" , cookieValue)
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            
+
+                    }  break;
+        }
+        // console.log("cookie value" , cookieValue)
+        var url = "subratmohanty"
+        var c = encodeURIComponent(url)
+        console.log("c",c)
+        var d = decodeURIComponent(c)
+        console.log("d" , d)
+        
+    }
+    };
+    
+
+    </script>
+</head>
+<body>
+    Enter name : <input type="text" placeholder="Enter Your Name" id="name" >
+    <button onclick="getCookie('subrat')">Submit</button>
+
+    <p id="submitbox">show</p>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: inline-block;
+            width: 22px;
+            margin: 50px;
+            font-size: 40px;
+            text-align: center ;
+            color: rgb(111, 23, 22);
+            font-style: italic;
+        }
+        h1{
+            text-align: center;
+            color: rgb(42, 58, 165);
+            font-weight: 200;
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+        function one(){
+            var data = "<h1> 1 to 10 Number list </h1> \n";
+
+            for(var a=1; a<=10; a++){
+                data = data + "<p>" + a  + "</p> \n" 
+            }
+            // alert(data)
+            document.getElementById("container").innerHTML = data 
+
+        }
+
+
+
+
+
+        function two(){
+            var data = "<h1> 10 to 20 Number list </h1> \n";
+
+            for(var a=10; a<=20; a++){
+                data = data + "<p>" + a  + "</p> \n" 
+
+
+            }
+            // alert(data)
+            document.getElementById("container").innerHTML = data 
+
+        }
+
+
+
+
+
+        function three(){
+            var data = "<h1> 10 to 20  Odd Number list </h1> \n";
+
+            for(var a=10; a<=20; a++){
+                if (a% 2 != 0){
+                data = data + "<p>" + a  + "</p> \n" 
+                }
+
+
+            }
+            // alert(data)
+            document.getElementById("container").innerHTML = data 
+
+        }
+
+        function four(){
+            var data = "<h1> 10 to 20 Even  Number list </h1> \n";
+
+            for(var a=10; a<=20; a++){
+                if (a % 2 == 0){
+                data = data + "<p>" + a  + "</p> \n" 
+                }
+
+
+            }
+            // alert(data)
+            document.getElementById("container").innerHTML = data 
+
+        }
+    </script>
+    
+</head>
+<body onload="one()">
+    <div align="center">
+        <h1>Javascript Forloop with dynamic data-binding</h1>
+    <button onclick="one()">Print 1 to 10 </button>
+    <button onclick="two()">Print 10 to 20 </button>
+    <button onclick="three()">Print 10 to 20 Odd number</button>
+    <button onclick="four()">Print 10 to 20 Even number </button>
+</div>
+
+    <br>
+    <br>
+
+    <div id="container" align="center">No Record  </div>
+    
+</body>
+</html>

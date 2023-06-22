@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script>
+
+
+        function delitem(index){ 
+            var sts = confirm("Are you Sure !!")
+            if(sts == true){
+                item.splice(index,1)
+                getitem();
+            }
+               
+        }
+
+        var item = ["Book","Pen","Mobile","Laptop"]
+        // var item = []
+        function getitem(){
+            var data  = "" ;
+            item.map((name, index)=>{
+                
+                data += "<div class='col-lg-3 mb-3 text-center'>"
+                data += "<div class='p-3 rounded shadow-lg '>"
+                data += "<h6 >" + name + "</h6>" 
+                data += "<button class='btn btn-danger' onclick='delitem("+index+")'> Delete</button>"
+                data += "</div>"
+                data += "</div>"
+            })
+            document.getElementById("itemlist").innerHTML = data
+        }
+
+        function save(){
+            var newitem = document.getElementById("newitem").value
+            // alert(newitem)
+            // document.getElementById("itemlist").innerHTML = newitem
+            item.push(newitem) // to add new item element at the end of array
+            getitem(); // to reload the list after adding new item 
+
+
+            // To clear text field 
+            document.getElementById("newitem").value="";
+        }
+
+        function remove(){
+            var newitem = document.getElementById("newitem").value
+            if (newitem == item){
+                delete(newitem)
+            }
+            // alert(newitem)
+            // document.getElementById("itemlist").innerHTML = newitem
+            // item.push(newitem) // to add new item element at the end of array
+            // getitem(); // to reload the list after adding new item 
+
+
+            // To clear text field 
+            document.getElementById("newitem").value="";
+        }
+    </script>
+</head>
+<body onload="getitem()">
+    <div class="container" mt-5>
+        <div class="row mb-5">
+            <div class="col-lg-12 text-center">
+                <h3>Array Add, List, Delete Example</h3>
+                <p>
+                    Enter Book Name : <input type="text"  id="newitem" class="m-3"/>
+                    <button onclick="save()" class="btn btn-success">Save</button>
+
+                </p>
+            </div>
+        </div>
+        <div  class="row" id="itemlist">
+
+        </div>
+    </div>
+    
+</body>
+</html>

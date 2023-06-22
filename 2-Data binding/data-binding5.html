@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function one(){
+            var name = document.getElementById("fname").value;
+            document.getElementById("dname").innerText = name
+
+            var name = document.getElementById("mobile").value;
+            document.getElementById("mname").innerText = name
+
+            var name = document.getElementById("email").value;
+            document.getElementById("emailn").innerText = name
+
+            var name = document.getElementById("address").value;
+            document.getElementById("naddress").innerText = name
+
+        }
+    </script>
+</head>
+<body>
+    <table align="center" cellpadding="10">
+        <caption> <h1>.value & .innerText</h1></caption>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" id="fname"/></td>
+            <!-- <td id="dname">?</td> -->
+        </tr>
+        <tr>
+            <th>Mobile</th>
+            <td><input type="number" id="mobile"/></td>
+            <!-- <td id="mname">?</td> -->
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="email" id="email"/></td>
+            <!-- <td id="emailn">?</td> -->
+        </tr>
+
+        <tr>
+            <th>Address</th>
+            <td><input type="text" id="address"/></td>
+            <!-- <td id="naddress">?</td> -->
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button onclick="one()">process</button>
+            </th>
+        </tr>
+    </table>
+
+
+   <center> <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td id="dname"></td>
+            <td id="mname"></td>
+            <td id="emailn"></td>
+            <td id="naddress"></td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>

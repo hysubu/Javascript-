@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage two</title>
+    <style>
+    #container{
+         border: 1px solid rgb(224, 30, 30); 
+        width: 500px;
+        height: 300px;
+        box-shadow: 0px 0px 10px rgb(142, 90, 90);
+        border-radius: 5px;
+    }
+    </style>
+   
+    <script>
+        function getdata() {
+            var name = localStorage.getItem("fullname")
+            var age = localStorage.getItem("age")
+            var gender = localStorage.getItem("gender")
+            var edu = localStorage.getItem("education")
+            var cty = localStorage.getItem("city")
+           
+            var data = "<p> name "+ name + "</p>"
+            "<br/>"
+             data  += "<p> name "+ age + "</p>"
+             "<br/>"
+             data += "<p> name "+ edu + "</p>"
+             "<br/>"
+             data += "<p> name "+ cty+ "</p>"
+            document.getElementById("container").innerHTML = data
+        }
+    </script>
+</head>
+
+<body onload="getdata()">
+    <center>
+    <h1>Data from Local Storage</h1>
+    <!-- <input type="text" id="value"> -->
+    <div id="container"></div>
+</center>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getphoto(pic_location) {
+            // alert(pic_location)
+            document.getElementById("allpic").src = pic_location
+        }
+
+
+        // function one() {
+            // alert(pic_location)
+            // document.getElementById("allpic").height = 200
+            // document.getElementById("allpic").width = 300
+            // document.getElementById("bsm").disabled = true
+            // document.getElementById("blg").disabled = false
+        // }
+
+
+        // function two() {
+            // // alert(pic_location)
+            // document.getElementById("allpic").height = 300
+            // document.getElementById("allpic").width = 500
+
+
+            //   document.getElementById("bsm").disabled = false
+            // document.getElementById("blg").disabled = true
+        // }
+
+
+
+        // function three() {
+            // alert(pic_location)
+            // document.getElementById("allpic").style.borderRadius = "70%"
+            // document.getElementById("allpic").width = 500
+
+
+            //   document.getElementById("bsm").disabled = false
+            // document.getElementById("blg").disabled = true
+        // }
+    </script>
+</head>
+
+<body align="center">
+    <p>
+        <button onclick="one()" id="bsm">Small</button>
+        <button onclick="two()" id="blg">Large</button>
+        <button onclick="three()">Apply CSS</button>
+    </p>
+    <!-- <p>
+        <button onmouseenter="one()">Small</button>
+        <button onmouseenter="two()">Large</button> -->
+    <!-- </p> -->
+
+    <img src="p1.jpg" height="400px" width="600px" id="allpic" alt="">
+    <br>
+    <br>
+     <img src="p2.jpg" height="150px" width="200px" id="mypic2" onclick="getphoto(this.src)">
+    <img src="p1.jpg" height="150px" width="200px" id="mypic2" onclick="getphoto(this.src)">>
+    <img src="p2.jpg" height="150px" width="200px" id="mypic2" onclick="getphoto(this.src)">>
+    <br>
+    <br>
+
+    <img src="p2.jpg" height="150px" width="200px" id="mypic2" onmouseenter="getphoto(this.src)">
+    <img src="p1.jpg" height="150px" width="200px" id="mypic2" onmouseenter="getphoto(this.src)">>
+    <img src="p2.jpg" height="150px" width="200px" id="mypic2" onmouseenter="getphoto(this.src)">> 
+
+
+
+   
+
+
+</body>
+
+</html>

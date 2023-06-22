@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <script>
+        var allbook = ["HTMl", "CSS", "JS", "REACT"]
+        function getbook() {
+            var data = ""
+            allbook.map((name, index) => {
+                data += "<tr>"
+                data += "<td>" + index + "</td>"
+                data += "<td>" + name + "</td>"
+                data+= "<td> <button onclick = 'delbook("+ index +")' class=' btn btn-danger'> Delete </button> </td>"
+                "</tr>"
+
+
+            })
+            document.getElementById("booklist").innerHTML = data
+
+        }
+
+        // function 2 
+
+        function save() {
+            
+
+            var n = document.getElementById("newbook").value.trim()
+            if (n!= ""){
+                allbook.unshift(n)
+            // allbook.push(n)  // unshift :- its added data in begining start
+            // unshift :- its added data in begining start
+            // alert("Book Added")
+            getbook();
+            document.getElementById("msg").innerText = n + "  Added Successfully !!"
+
+            
+        }else{
+            document.getElementById("msg").innerText = "Invalid Book Name !!"
+        }
+
+        }
+
+
+
+        function save2() {
+            var n = document.getElementById("newbook2").value.trim() ;
+            if (n!= ""){
+                allbook.push(n)
+            // allbook.push(n)  // unshift :- its added data in begining start
+            // unshift :- its added data in begining start
+            // alert("Book Added")
+            getbook();
+            document.getElementById("msg").innerText = n + "  Added Successfully !!"
+
+            
+        }else{
+            document.getElementById("msg").innerText = "Invalid Book Name !!"
+        }
+
+          
+        }
+
+
+        function delbook(index){
+            var name = allbook[index]
+            allbook.splice(index,1)
+            getbook();
+            document.getElementById("msg").innerText = name  +  "  Delete Successfully !!"
+
+        }
+
+    </script>
+
+
+<style>
+    .div{
+        /* border: 1px solid black; */
+        width: 500px;
+        height: 300px;
+        box-shadow: 0px 0px 10px rgb(74, 43, 43);
+        border-radius: 5px;
+    }
+    #msg{
+        color: green;
+    }
+</style>
+</head>
+
+<body onload="getbook()">
+
+    <!-- <center> -->
+<div align="center" class="m-5">
+       <p > Enter Book Name :-<input type="text" id="newbook"><span><button onclick="save()" class="btn btn-success m-2">Add Book Begin</button></span> </p> 
+        <!-- <br> -->
+        <p>Enter Book Name :-<input type="text" id="newbook2"> <span><button onclick="save2()" class="btn btn-warning m-2">Add Book Last</button></span> </p>
+        <br>
+        <p id="msg" align="center"></p>
+        <div class="div">
+            <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl No</th>
+                    <th>Books Name</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="booklist">
+
+            </tbody>
+        </table>
+    </div>
+        <!-- <div id="booklist"></div> -->
+    <!-- </center> -->
+    </div>
+</body>
+
+</html>

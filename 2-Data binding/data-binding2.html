@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function one(){
+            // document.getElementsByClassName
+            document.getElementsById("xyz").innerText = "sds"
+        }
+
+        function two(){
+            document.getElementById("xyz").innerHTML = "Hello"
+}
+
+
+// var one = () => {
+//     document.getElementById('xyz').innerText = "hii"
+// }
+
+// var two = () => {
+//     document.getElementById('xyz').innerHTML = "hello"
+// }
+    </script>
+</head>
+<body>
+    <h1>Html and javascript innerText and innerHTML Example</h1>
+    <button onclick="one()"> Process of innerText</button>
+    <button onclick="two()"> Process of innerHTML</button>
+
+    <div id="xyz"></div>
+
+    <!-- <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div> -->
+</body>
+</html>
+<!-- getElementsById    ita s function in javascript 
+
+document is a class  in javascript -->

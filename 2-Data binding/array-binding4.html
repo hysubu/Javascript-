@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getinfo(){
+            var user ={name:"ganesh",
+            age:"30 years",
+            mobile:12345667
+        }
+        var data = "<h2> user detail </h2>" ;
+        data += "<p>"+ user.name + "</p>" ;
+        data += "<p>"+ user.age + "</p>" ;
+        data += "<p>"+ user.mobile + "</p>" ;
+        document.getElementById("userinfo").innerHTML = data 
+        }
+        function getuser(){
+            var alluser = [
+                {name:"subu", education:"Btech"},
+                {name:"abhi", education:"Mtech"},
+                {name:"subrat", education:"Diploma"},
+                {name:"sk", education:"matric"},
+            ]
+
+            var data = "<h2> user List </h2>"
+            alluser.map((user,index)=>{
+                data += "<p>" + user.name +"  ,  "+ user.education + "</p>"
+                // data += "<p>" + user.name + "</p>"
+                
+            })
+            document.getElementById("userinfo").innerHTML = data
+        }
+    </script>
+</head>
+<body>
+    <h1> Javascript Array of object </h1>
+    <button  onclick="getinfo()">Show detail </button>
+    <button  onclick="getuser()">User list </button>
+
+
+    <div id="userinfo"></div>
+  
+</body>
+</html>

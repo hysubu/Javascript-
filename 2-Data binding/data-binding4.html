@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function one(){
+           var city =  document.getElementById("mycity").value ;
+           document.getElementById('xyz').innerText  = city
+           document.getElementById('total').innerText  = city.length ;
+           document.getElementById('pending').innerText  = 100-city.length ;
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>.value + .innerText + onkeyup Example </h1>
+    <p>
+        <!-- Eneter Any City Name : <input type="text" id="mycity" onkeydown="one()"> -->
+        Eneter Any City Name : <input type="text" id="mycity" onkeyup="one()">
+        <!-- Eneter Any City Name : <input type="text" id="mycity" oncanplay="one()"> -->
+
+
+        <!-- <button onclick="one()">processNow</button> -->
+        <!-- <button ondblclick="one()">processNow</button> -->
+
+        
+    </p>
+    <h1 id="total">length :0</h1>
+    <p id="xyz"></p>
+    <h1 id="pending">100</h1>
+</body>
+</html>
