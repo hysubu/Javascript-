@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script>
+        function save(){
+            // alert("hello")
+            var book = document.getElementById('bookname').value
+            var price = document.getElementById('bookprice').value
+            var qty = document.getElementById('bookqty').value
+            var newbook = {"name":book,
+                           "price":price,
+                            "qty":qty}
+            
+            var url = "http://localhost:3000/booklist"
+            var postoption = {
+                headers:{"Content-Type" : 'application/json'},  // What type of data we sending to server or url 
+                method : 'post',        // post some data to server / url
+                body :JSON.stringify(newbook)    // Convert Array to json
+
+            }
+            fetch(url,postoption)
+            .then(response=> response.json())
+            .then( sserverres =>{
+                alert("successfuly")
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center"> Enter New Book Details </h1>
+    <table align="center" cellpadding="15">
+        <tr>
+            <th>Book Name</th>
+            <td><input type="text" size="40" id="bookname"></td>
+            <br>
+        </tr>
+        <tr>
+            <th>Book Price</th>
+            <td><input type="text" size="40" id="bookprice"></td>
+        </tr>
+            <br>
+            <th>Book Quentity</th>
+            <td><input type="text" size="40" id="bookqty"></td>
+        
+        <!-- <tr align="center">
+            <th colspan="2">
+                <button onclick="save()" class="btn btn-primary">Save</button>
+            </th>
+        </tr> -->
+    </table>
+    <p align="center">
+    
+        <button onclick="save()" class="btn btn-primary">Save</button>
+    <span><a class="btn btn-success" href="index.html">Back To Home</a> 
+        <!-- <a class="btn btn-success" href="index.html">Back To Home</a> -->
+    </span>
+    </p>
+   
+   
+</body>
+</html>

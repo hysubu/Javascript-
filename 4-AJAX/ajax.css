@@ -1,0 +1,56 @@
+body{
+    margin:0px;
+}
+
+ul{
+    background-color: black;
+    padding:5px;
+    margin:0px;
+}
+
+ul li{
+    display:inline-block;
+    padding:15px;
+    color:white;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+#apidata{
+    width:80%;
+    margin:auto;
+    min-height:500px;
+}
+
+.user{
+    margin:2%;
+    padding:1%;
+    display:inline-block;
+    border-top:15px solid blue;
+    width:18%;
+    vertical-align: top;
+    min-height:200px;
+}
+
+footer{
+    height:120px;
+    padding:30px;
+    background-color: blue;
+    text-align:center;
+    color:white;
+    top:50px;
+}
+
+h1{
+    color:red;
+    font-size: 70px;
+    text-align:center;
+}
+.myuser{
+    margin: 2%;
+    padding: 1%;
+    display: inline-block;
+    font-size:  25px;
+    width: 19%;
+
+}

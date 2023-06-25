@@ -1,0 +1,25 @@
+[
+{"id" :1,
+    "name":"jajpur",
+    "state":"Odisha",
+    "capital":"BBsr"
+},
+{ "id" :2,
+"name":"Puri",
+"state":"Odisha",
+"capital":"BBsr"
+
+},
+{ "id" :3,
+"name":"cuttack",
+"state":"Odisha",
+"capital":"BBsr"
+
+},
+{ "id" :4,
+"name":"nayagad",
+"state":"Odisha",
+"capital":"BBsr"
+
+}
+]

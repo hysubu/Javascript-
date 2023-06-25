@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="ajax.css"/>
+        <script src="ajax.js"></script>
+    </head>
+    <body onload="getfile('home.html')">
+        <ul>
+            <li onclick="getfile('home.html')">Home</li>
+            <li onclick="getfile('about.html')">About Us</li>
+            <li onclick="getfile('gallery.html')">Gallery</li>
+            <li onclick="getfile('service.html')">Our Services</li>
+            <li onclick="json1()">Json Parse - 1 </li>
+            <li onclick="json2()">Json Parse - 2 </li>
+        </ul>
+        <section id="apidata"></section>
+        <footer>
+            AJAX - Asynchronous JavaScript and XML 
+        </footer>
+    </body>
+</html>

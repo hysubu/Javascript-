@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+}
+
+/* ul{
+    background-color: rgb(243, 0, 0);
+    padding: 8px;
+    margin: 0px;
+} */
+
+ul li{
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+a{
+    color: white;
+}
+#apidata{
+    width: 80%;
+    margin: auto;
+    /* border: 2px solid black; */
+}
+.user{
+    margin: 2%;
+    padding: 1%;
+    display: inline-block;
+    /* border-top: 15px solid blue; */
+    border-bottom: 10px solid skyblue;
+    width: 18%;
+    border: 10px solid rgb(68, 46, 144);
+    vertical-align: top;
+    min-height: 230px;
+}
